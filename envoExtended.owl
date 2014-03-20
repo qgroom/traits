@@ -1,0 +1,410 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY obo "http://purl.obolibrary.org/obo/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY oboInOwl "http://www.geneontology.org/formats/oboInOwl#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/quentin/ontologies/2014/2/untitled-ontology-4#"
+     xml:base="http://www.semanticweb.org/quentin/ontologies/2014/2/untitled-ontology-4"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/quentin/ontologies/2014/2/untitled-ontology-4">
+        <owl:imports rdf:resource="&obo;envo.owl"/>
+        <owl:imports rdf:resource="&obo;pato.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00000111 -->
+
+    <rdf:Description rdf:about="&obo;ENVO_00000111">
+        <rdfs:label xml:lang="fr">forêt</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_8000001 -->
+
+    <owl:Class rdf:about="&obo;ENVO_8000001">
+        <rdfs:label xml:lang="en">fallow</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;ENVO_00002031"/>
+        <obo:IAO_0000115 xml:lang="en">Land purposely left after the cultivation of a crop. Generally the land is left when it is exhausted with the intension of bring it back into cultivation in the future.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">jachère</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_8000002 -->
+
+    <owl:Class rdf:about="&obo;ENVO_8000002">
+        <rdfs:label xml:lang="en">primary forest</rdfs:label>
+        <rdfs:label xml:lang="fr">forêt primaire</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;ENVO_00000111"/>
+        <obo:IAO_0000115 xml:lang="en">Forest that has never been cut or otherwise disturbed. Usually containing many large old trees and a diverse flora and fauna.</obo:IAO_0000115>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">ancient woodland</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">old-growth forest</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">virgin forest</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym xml:lang="fr">forêt primitive</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym xml:lang="fr">forêt vierge</oboInOwl:hasRelatedSynonym>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_8000003 -->
+
+    <owl:Class rdf:about="&obo;ENVO_8000003">
+        <rdfs:label xml:lang="en">secondary forest</rdfs:label>
+        <rdfs:label xml:lang="fr">forêt secondaire</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;ENVO_00000111"/>
+        <obo:IAO_0000115 xml:lang="en">Forest that has regenerated after being cleared. The cause of the clearance might be natural, such a fire or hurricane, or the result of felling by mankind.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_8000004 -->
+
+    <owl:Class rdf:about="&obo;ENVO_8000004">
+        <rdfs:label xml:lang="en">termite mound</rdfs:label>
+        <rdfs:label xml:lang="fr">termitière</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;ENVO_00000191"/>
+        <obo:IAO_0000115 xml:lang="en">Large nests created by termites from soil.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_8000005 -->
+
+    <owl:Class rdf:about="&obo;ENVO_8000005">
+        <rdfs:label xml:lang="en">open forest</rdfs:label>
+        <rdfs:label xml:lang="fr">forêts claire</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;ENVO_01000174"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;envo#has_quality"/>
+                <owl:someValuesFrom rdf:resource="&obo;PATO_0001609"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="fr">A forest where the trees are well spaced apart.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_8000006 -->
+
+    <owl:Class rdf:about="&obo;ENVO_8000006">
+        <rdfs:label xml:lang="en">dense forest</rdfs:label>
+        <rdfs:label xml:lang="fr">forêt dense</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;ENVO_01000174"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;envo#has_quality"/>
+                <owl:someValuesFrom rdf:resource="&obo;PATO_0001164"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="en">A forest where the trees are close together.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_8000007 -->
+
+    <owl:Class rdf:about="&obo;ENVO_8000007">
+        <rdfs:label xml:lang="en">seasonly flooded forest</rdfs:label>
+        <rdfs:label xml:lang="fr">forêt périodiquement inondé</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;ENVO_01000228"/>
+        <obo:IAO_0000115 xml:lang="en">Forests that become seasonaly flooded, usually during the rainy season.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_8000008 -->
+
+    <owl:Class rdf:about="&obo;ENVO_8000008">
+        <rdfs:label xml:lang="en">sandy soil</rdfs:label>
+        <rdfs:label xml:lang="en">soil containing a large proportion of sand, often found near the coast or along rivers.</rdfs:label>
+        <rdfs:label xml:lang="fr">sol sablonneux</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;ENVO_00001998"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_8000009 -->
+
+    <owl:Class rdf:about="&obo;ENVO_8000009">
+        <rdfs:label xml:lang="en">wall</rdfs:label>
+        <rdfs:label xml:lang="fr">mur</rdfs:label>
+        <rdfs:label xml:lang="la">muro</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;ENVO_00000070"/>
+        <obo:IAO_0000115 xml:lang="fr">a manmade barrier created from brick or stone</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_8000010 -->
+
+    <owl:Class rdf:about="&obo;ENVO_8000010">
+        <rdfs:label xml:lang="en">dry stone wall</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;ENVO_8000009"/>
+        <obo:IAO_0000115 xml:lang="en">Walls created fro, rough stones piled upon each other without any morter.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">mur de pierres sèches</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_8000011 -->
+
+    <owl:Class rdf:about="&obo;ENVO_8000011">
+        <rdfs:label xml:lang="en">brick wall</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;ENVO_8000009"/>
+        <obo:IAO_0000115 xml:lang="fr">mur de briques</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_8000012 -->
+
+    <owl:Class rdf:about="&obo;ENVO_8000012">
+        <rdfs:label xml:lang="en">crag</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;ENVO_00000176"/>
+        <obo:IAO_0000115 xml:lang="en">A large outcrop of rock, usually at the top or side of a hill.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/purl/ENVO_8000000 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/purl/ENVO_8000000">
+        <rdfs:label xml:lang="en">gallery forest</rdfs:label>
+        <rdfs:label xml:lang="fr">galeries forestières</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;ENVO_01000228"/>
+        <obo:IAO_0000115 xml:lang="en">tropical forest corridors along rivers and streams within the savanna ecosystem.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="&obo;ENVO_00000106">
+        <rdfs:label xml:lang="fr">pelouse</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;ENVO_00000143">
+        <rdfs:label xml:lang="fr">bord des rivière</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;ENVO_00000288">
+        <rdfs:label xml:lang="fr">plantation de coton</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;ENVO_00000382">
+        <rdfs:label xml:lang="fr">bords de lac</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;ENVO_00000444">
+        <rdfs:label xml:lang="fr">clairière</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;ENVO_00000300">
+        <rdfs:label xml:lang="fr">brousse</rdfs:label>
+        <oboInOwl:hasBroadSynonym xml:lang="en">thicket</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasBroadSynonym xml:lang="fr">fourré</oboInOwl:hasBroadSynonym>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;ENVO_00000011">
+        <rdfs:label xml:lang="fr">jardin</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;ENVO_00000170">
+        <rdfs:label xml:lang="fr">dune</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;ENVO_00000098">
+        <rdfs:label xml:lang="fr">île</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;ENVO_00000099">
+        <rdfs:label xml:lang="fr">île artificielle</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;ENVO_00010625">
+        <rdfs:label xml:lang="fr">jardin zoologique</rdfs:label>
+        <oboInOwl:hasExactSynonym xml:lang="fr">parc zoologique</oboInOwl:hasExactSynonym>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;ENVO_00010624">
+        <rdfs:label xml:lang="fr">jardin botanic</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;ENVO_00000095">
+        <rdfs:label xml:lang="fr">champ de lave</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;ENVO_00003040">
+        <oboInOwl:hasRelatedSynonym xml:lang="en">stable</oboInOwl:hasRelatedSynonym>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;ENVO_00000376">
+        <rdfs:label xml:lang="fr">réserve de biosphère</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;ENVO_00000375">
+        <rdfs:label xml:lang="fr">patrimoine mondial</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;ENVO_00002138">
+        <rdfs:label xml:lang="fr">sable de la plage</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;ENVO_00002237">
+        <rdfs:label xml:lang="fr">tchernoziom</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;ENVO_00000166">
+        <rdfs:label xml:lang="fr">atoll</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;ENVO_00005745">
+        <rdfs:label xml:lang="fr">jardins familiaux</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;ENVO_00000164">
+        <rdfs:label xml:lang="fr">plantation de caoutchouc</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;ENVO_00000163">
+        <rdfs:label xml:lang="fr">plantation de café</rdfs:label>
+        <obo:IAO_0000115 xml:lang="en">An agricultural area planted with coffee trees and used for the production of coffee beans.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym xml:lang="fr">caféière</oboInOwl:hasExactSynonym>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;ENVO_00002262">
+        <rdfs:label xml:lang="fr">sol argileux</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;ENVO_00000162">
+        <rdfs:label xml:lang="fr">plantation de thé</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;ENVO_00000161">
+        <rdfs:label xml:lang="fr">plantation de bananiers</rdfs:label>
+        <oboInOwl:hasExactSynonym xml:lang="fr">bananeraie</oboInOwl:hasExactSynonym>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;ENVO_00000362">
+        <rdfs:label xml:lang="fr">aire marine protégée</rdfs:label>
+        <oboInOwl:hasExactSynonym xml:lang="fr">parc marin</oboInOwl:hasExactSynonym>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;ENVO_00000363">
+        <rdfs:label xml:lang="fr">réserve naturelle</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;ENVO_00000261">
+        <rdfs:label xml:lang="fr">savane</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;ENVO_00000365">
+        <rdfs:label xml:lang="fr">zone ramsar</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;ENVO_00000266">
+        <rdfs:label xml:lang="fr">pâturage</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;ENVO_00000360">
+        <rdfs:label xml:lang="fr">forêt nationale</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;ENVO_00000423">
+        <rdfs:label xml:lang="fr">île du fleuve</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;ENVO_00000367">
+        <rdfs:label xml:lang="fr">parc national</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;ENVO_00000366">
+        <rdfs:label xml:lang="fr">réserve naturelle national</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;ENVO_00000074">
+        <rdfs:label xml:lang="fr">barrage</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;ENVO_00000221">
+        <rdfs:label xml:lang="fr">îles continentale</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;ENVO_00000427">
+        <rdfs:label xml:lang="fr">méandre</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;ENVO_00000120">
+        <rdfs:label xml:lang="fr">plantation de palmiers</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;ENVO_00000035">
+        <rdfs:label xml:lang="fr">marais</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;ENVO_00000033">
+        <rdfs:label xml:lang="fr">mare</rdfs:label>
+        <oboInOwl:hasRelatedSynonym xml:lang="fr">étang</oboInOwl:hasRelatedSynonym>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;ENVO_00000118">
+        <rdfs:label xml:lang="fr">plantation de cocotiers</rdfs:label>
+        <oboInOwl:hasExactSynonym xml:lang="fr">cocoteraie</oboInOwl:hasExactSynonym>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;ENVO_00000117">
+        <rdfs:label xml:lang="fr">plantation</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;ENVO_00000116">
+        <rdfs:label xml:lang="fr">vignoble</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;ENVO_00000296">
+        <rdfs:label xml:lang="fr">rizière</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;ENVO_00000115">
+        <rdfs:label xml:lang="fr">verger</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;ENVO_00000113">
+        <rdfs:label xml:lang="fr">culture</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;ENVO_00000193">
+        <rdfs:label xml:lang="fr">oliveraie</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;ENVO_00000500">
+        <rdfs:label xml:lang="fr">barrage de castors</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;ENVO_00000564">
+        <rdfs:label xml:lang="fr">site archéologique</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;ENVO_00000562">
+        <rdfs:label xml:lang="fr">parc</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;ENVO_00000359">
+        <rdfs:label xml:lang="fr">monument naturel</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;ENVO_00000358">
+        <rdfs:label xml:lang="fr">zone protégée</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;ENVO_00000083">
+        <rdfs:label xml:lang="fr">colline</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;ENVO_00010442">
+        <rdfs:label xml:lang="fr">fumier</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;ENVO_00000044">
+        <rdfs:label xml:lang="fr">tourbière</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;ENVO_00000318">
+        <rdfs:label xml:lang="fr">zone de la marée haute</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;ENVO_00000081">
+        <rdfs:label xml:lang="fr">montagne</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;ENVO_00000046">
+        <rdfs:label xml:lang="fr">haie</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;ENVO_00000159">
+        <rdfs:label xml:lang="en">sugar cane plantation</rdfs:label>
+        <rdfs:label xml:lang="fr">plantation de canne à sucre</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;ENVO_00000042">
+        <oboInOwl:hasRelatedSynonym xml:lang="en">ditch</oboInOwl:hasRelatedSynonym>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
